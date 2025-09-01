@@ -1,0 +1,13 @@
+# Local env
+.env
+
+# Hugo build output
+site/public/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+

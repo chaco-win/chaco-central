@@ -1,0 +1,52 @@
+services:
+  web:
+    image: nginx:1.27-alpine
+    container_name: chaco_web
+    restart: unless-stopped
+    # Run unprivileged on high port with hardening
+    user: "101:101" # nginx user in alpine image
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: ["ALL"]
+    volumes:
+      - ./site/public:/usr/share/nginx/html:ro
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    tmpfs:
+      - /var/cache/nginx:rw,noexec,nosuid,size=64m
+      - /var/run:rw,noexec,nosuid,size=8m
+      - /var/log/nginx:rw,noexec,nosuid,size=8m
+    healthcheck:
+      test: ["CMD-SHELL", "pidof nginx >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks:
+      - web_pub
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: chaco_cloudflared
+    restart: unless-stopped
+    command: ["tunnel", "--no-autoupdate", "run", "--token", "${TUNNEL_TOKEN}"]
+    env_file:
+      - .env
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: ["ALL"]
+    # Cloudflared writes ephemeral state; back it with tmpfs
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+      - /home/nonroot:rw,noexec,nosuid,size=32m,mode=700
+      - /var/lib/cloudflared:rw,noexec,nosuid,size=32m,mode=700
+    depends_on:
+      - web
+    networks:
+      - web_pub
+
+networks:
+  web_pub:
+    driver: bridge

@@ -1,0 +1,137 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Chaco Central"
+enableRobotsTXT = true
+publishDir = "public"
+
+[module]
+  [[module.imports]]
+    path = "github.com/gurusabarish/hugo-profile"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  title = "Chaco Central"
+  description = "Personal portfolio + technical blog: homelab, Docker, networks, and projects."
+  favicon = "/fav.png"
+  animate = true
+
+  [params.theme]
+    # defaultTheme = "auto" # or "light"/"dark"
+
+  [params.navbar]
+    align = "ms-auto"
+    brandName = "Chaco Central"
+    disableSearch = true
+    [params.navbar.stickyNavBar]
+      enable = true
+      showOnScrollUp = true
+    enableSeparator = false
+    [params.navbar.menus]
+      disableAbout = false
+      disableExperience = true
+      disableEducation = true
+      disableProjects = false
+      disableAchievements = true
+      disableContact = true
+
+  [params.hero]
+    enable = true
+    intro = "Hi, I’m"
+    title = "Chase Osborne."
+    subtitle = "I build resilient homelab and IT automation."
+    content = "Hands-on IT pro focused on Docker, networks, identity, and reproducible infrastructure."
+    image = "/images/hero.svg"
+    [params.hero.bottomImage]
+      enable = true
+    [params.hero.button]
+      enable = true
+      name = "Resume"
+      url = "/about/"
+      download = false
+      newPage = false
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fab fa-github"
+      url = "https://github.com/your-username"
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fab fa-linkedin"
+      url = "https://www.linkedin.com/in/your-handle"
+
+  [params.about]
+    enable = true
+    title = "About / Resume"
+    image = "/images/me.svg"
+    content = """
+Hands-on IT professional with 5+ years supporting 200+ users across multi-building operations. Experienced in IT management, automation, and system administration. Skilled in AD, Microsoft 365, and hybrid Exchange, plus self-hosted infrastructure with Docker, Python, and PowerShell.
+"""
+    [params.about.skills]
+      enable = true
+      title = "Recent technologies and tools:"
+      items = [
+        "Windows Server",
+        "Active Directory",
+        "O365 (Hybrid Exchange)",
+        "Ubuntu Server",
+        "OPNsense",
+        "Docker & Compose",
+        "ZFS/RAID",
+        "Python & PowerShell"
+      ]
+
+  [params.projects]
+    enable = true
+    # Home page cards linking to posts
+    [[params.projects.items]]
+      title = "FAB Events Calendar"
+      content = "Dockerized Python scraper syncing events to Google Calendar/iCal with health checks and Discord alerts."
+      image = "/images/projects/fab-events.svg"
+      [[params.projects.items.links]]
+        icon = "fas fa-link"
+        url = "/blogs/fab-events-calendar/"
+    [[params.projects.items]]
+      title = "Password Automation Tool"
+      content = "Production PowerShell to generate secure, memorable onboarding passwords."
+      image = "/images/projects/password-tool.svg"
+      [[params.projects.items.links]]
+        icon = "fas fa-link"
+        url = "/blogs/password-automation-tool/"
+    [[params.projects.items]]
+      title = "Homelab Infrastructure"
+      content = "Ubuntu + ZFS, Pi-hole/Unbound, PiKVM, OPNsense, VLANs, backups, offsite replication."
+      image = "/images/projects/homelab.svg"
+      [[params.projects.items.links]]
+        icon = "fas fa-link"
+        url = "/blogs/homelab-overview/"
+
+  [params.footer.socialNetworks]
+    github = "https://github.com/your-username"
+    linkedin = "https://www.linkedin.com/in/your-handle"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blogs/"
+    weight = 30
+
+  [[menu.main]]
+    name = "Certifications"
+    url = "/certifications/"
+    weight = 40
+
+  [[menu.main]]
+    name = "Changelog"
+    url = "/changelog/"
+    weight = 60
