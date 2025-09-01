@@ -50,16 +50,20 @@ services:
   hugo:
     image: klakegg/hugo:ext-alpine
     working_dir: /src
-    command: ["sh","-lc","hugo mod get && hugo"]
+    command: ["sh","-lc","hugo mod get && hugo --minify"]
     volumes:
       - ./site:/src
     # Run with your UID/GID to avoid root-owned files
     user: "${UID:-1000}:${GID:-1000}"
-    profiles: ["build"]
+    environment:
+      - HUGO_ENV=production
     read_only: true
     networks:
       - web_pub
 
 networks:
   web_pub:
+    depends_on:
+      hugo:
+        condition: service_completed_successfully
     driver: bridge
