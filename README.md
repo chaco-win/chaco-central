@@ -55,6 +55,21 @@ Local Development Workflow
 - Deploy by updating `site/public/` and restarting `web` (if needed):
   - `docker compose restart web`
 
+One-Command Deploy (server)
+---------------------------
+- Run `scripts/deploy.sh` on the server to pull, build (Hugo modules + content), and restart Nginx:
+  - `bash scripts/deploy.sh`
+- Equivalent manual steps:
+  - `git pull`
+  - `cd site && docker run --rm -u $(id -u):$(id -g) -v "$PWD:/src" -w /src klakegg/hugo:ext-alpine sh -lc "hugo mod get && hugo" && cd ..`
+  - `docker compose restart web`
+
+Optional: Compose build service
+-------------------------------
+- A one-shot `hugo` service is included behind the `build` profile. Use it like this (keeps file ownership correct):
+  - `UID=$(id -u) GID=$(id -g) docker compose run --rm --profile build hugo`
+  - `docker compose restart web`
+
 Notes
 -----
 - Nginx runs unprivileged on 8081 so we can drop all capabilities.

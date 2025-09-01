@@ -46,6 +46,20 @@ services:
     networks:
       - web_pub
 
+  # Optional one-shot build service (run only when building content)
+  hugo:
+    image: klakegg/hugo:ext-alpine
+    working_dir: /src
+    command: ["sh","-lc","hugo mod get && hugo"]
+    volumes:
+      - ./site:/src
+    # Run with your UID/GID to avoid root-owned files
+    user: "${UID:-1000}:${GID:-1000}"
+    profiles: ["build"]
+    read_only: true
+    networks:
+      - web_pub
+
 networks:
   web_pub:
     driver: bridge
