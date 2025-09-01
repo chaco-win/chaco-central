@@ -10,6 +10,7 @@ Thumbs.db
 .idea/
 .vscode/
 *.log
+_tmp_*
 
 
 tmp_*.json

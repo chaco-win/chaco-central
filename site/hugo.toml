@@ -18,6 +18,7 @@ publishDir = "public"
   description = "Personal portfolio + technical blog: homelab, Docker, networks, and projects."
   favicon = "/fav.png"
   animate = true
+  customCSS = true
 
   [params.theme]
     disableThemeToggle = true
@@ -27,13 +28,14 @@ publishDir = "public"
     align = "ms-auto"
     brandName = "Chaco Central"
     disableSearch = true
+    showBrandLogo = false
     [params.navbar.stickyNavBar]
       enable = true
       showOnScrollUp = true
     enableSeparator = false
     [params.navbar.menus]
       disableAbout = true
-      disableExperience = true
+      disableExperience = false
       disableEducation = true
       disableProjects = true
       disableAchievements = true
@@ -56,10 +58,10 @@ publishDir = "public"
       newPage = false
     [[params.hero.socialLinks.fontAwesomeIcons]]
       icon = "fab fa-github"
-      url = "https://github.com/your-username"
+      url = "https://github.com/chaco-win"
     [[params.hero.socialLinks.fontAwesomeIcons]]
       icon = "fab fa-linkedin"
-      url = "https://www.linkedin.com/in/your-handle"
+      url = "https://www.linkedin.com/in/chase-osborne-5a5a4120a/"
 
   [params.about]
     enable = true
@@ -86,13 +88,6 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
     enable = true
     # Home page cards linking to posts
     [[params.projects.items]]
-      title = "Certifications"
-      content = "CompTIA Security+, Network+, and A+."
-      image = "/images/projects/certifications.svg"
-      [[params.projects.items.links]]
-        icon = "fas fa-link"
-        url = "/certifications/"
-    [[params.projects.items]]
       title = "FAB Events Calendar"
       content = "Dockerized Python scraper syncing events to Google Calendar/iCal with health checks and Discord alerts."
       image = "/images/projects/fab-events.svg"
@@ -114,9 +109,93 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
         icon = "fas fa-link"
         url = "/blogs/homelab-overview/"
 
+[params.achievements]
+  enable = true
+  title = "Certifications"
+
+  [[params.achievements.items]]
+    title = "CompTIA Security+"
+    content = "Core security certification"
+    url = "https://www.credly.com/badges/e2998bfa-0daa-49a3-8139-d894c0bb11a0"
+    image = "/images/Security+-png.png"
+
+  [[params.achievements.items]]
+    title = "CompTIA Network+"
+    content = "Networking fundamentals and troubleshooting"
+    url = "https://www.credly.com/badges/9a9efe12-d442-47c5-ad46-e8831bbce715"
+    image = "/images/Network+-png.png"
+
+  [[params.achievements.items]]
+    title = "CompTIA A+"
+    content = "Entry-level IT support"
+    url = "https://www.credly.com/badges/bca47ce0-3102-4b96-9256-230ac86bb3bb/linked_in_profile"
+    image = "/images/A+-png.png"
+
   [params.footer.socialNetworks]
-    github = "https://github.com/your-username"
-    linkedin = "https://www.linkedin.com/in/your-handle"
+    github = "https://github.com/chaco-win"
+    linkedin = "https://www.linkedin.com/in/chase-osborne-5a5a4120a/"
+
+[params.experience]
+  enable = true
+
+  [[params.experience.items]]
+    job = "IT Manager"
+    company = "Sovereign Pharmaceuticals"
+    date = "Sept 2023 – Jul 2025, Fort Worth, TX"
+    content = """
+- Led IT operations for 200+ users across 5 buildings, managing identity, infrastructure, and support while reporting to MSP.
+- Administered Active Directory, O365 hybrid Exchange, and Microsoft licensing.
+- Automated tasks with PowerShell & Python, including password generation and monitoring scripts with cron jobs + Discord alerts.
+- Deployed laptops, desktops, and printers; managed ERP (Forth Shift) and Empower chromatography software.
+- Oversaw vendor coordination (Sharp, Waters) and site-level procurement (~20 laptops annually, $1K/month consumables).
+- Implemented security cameras, cabling, and MDF/IDF layouts during site renovations.
+"""
+
+  [[params.experience.items]]
+    job = "IT Support Specialist"
+    company = "Sovereign Pharmaceuticals"
+    date = "Feb 2022 – Sept 2023, Fort Worth, TX"
+    content = """
+- Provided Tier 1–2 support for 200+ users and 230+ systems, resolving 200+ tickets monthly while maintaining SLAs.
+- Administered Microsoft 365, Azure AD, and Exchange identity provisioning.
+- Reduced PC deployment time by 40% through automation and documentation.
+- Supported Microsoft 365 tenant migration and site integrations.
+- Configured VPNs and supported new site acquisitions.
+"""
+
+  [[params.experience.items]]
+    job = "Account Support"
+    company = "PRA Group"
+    date = "Aug 2021 – Feb 2022, North Richland Hills, TX"
+    content = """
+- Assisted customers with account access issues via live chat (3 concurrent sessions) and email.
+- Guided users through secure account updates and payment plan setup.
+- Balanced high-volume workload of live support and email queues while maintaining accuracy.
+- Delivered Tier 1 troubleshooting and escalations in compliance-driven environment.
+"""
+
+  [[params.experience.items]]
+    job = "Dept Manager"
+    company = "Walmart"
+    date = "2018 – 2021, Multiple Locations"
+    content = """
+- Promoted from stocker to consumables manager during COVID, leading a 10-person team and serving as overnight manager for 30+ associates.
+- Directed store-wide operations 2 nights per week as highest-ranking manager.
+- Managed high-demand consumables (toilet paper, sanitizer, wipes) during pandemic shortages.
+- Sent to underperforming stores to stabilize operations and improve compliance.
+- Trained staff, oversaw merchandising, price changes, and holiday/seasonal displays.
+"""
+
+  [[params.experience.items]]
+    job = "Shift Supervisor"
+    company = "7-Eleven"
+    date = "2017 – 2018"
+    content = """
+- Promoted from stocker to keyholder within weeks, entrusted with opening/closing store operations independently.
+- Handled cash accountability, including ATM deposits, bank drops, and vendor checks.
+- Ordered seasonal products, managed vendor deliveries, and prepared store for promotions.
+- Conducted loss-prevention activities including camera footage review.
+"""
 
 [menu]
   [[menu.main]]
@@ -138,8 +217,3 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
     name = "Certifications"
     url = "/certifications/"
     weight = 40
-
-  [[menu.main]]
-    name = "Changelog"
-    url = "/changelog/"
-    weight = 60
