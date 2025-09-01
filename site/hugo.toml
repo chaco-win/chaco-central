@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.chaco.dev/"
 languageCode = "en-us"
 title = "Chaco Central"
 enableRobotsTXT = true

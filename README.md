@@ -60,7 +60,15 @@ Notes
 - Nginx runs unprivileged on 8081 so we can drop all capabilities.
 - TLS is handled by Cloudflare; Nginx serves plain HTTP in the internal network.
 - Ensure your Cloudflare DNS record for the hostname is `Proxied` and bound to the tunnel.
- - 8080 already in use? This stack listens on 8081 internally (no host port exposed), so it won’t conflict with other services.
+- 8080 already in use? This stack listens on 8081 internally (no host port exposed), so it won’t conflict with other services.
+
+Canonical URL
+-------------
+- Set the Hugo base URL to the public hostname:
+  - In `site/hugo.toml`: `baseURL = "https://www.chaco.dev/"`
+- Optional apex redirect (Cloudflare zone `chaco.dev`):
+  - DNS: add proxied A record for `@` → `192.0.2.1`
+  - Rules → Redirect Rules: wildcard `https://chaco.dev/*` → `https://www.chaco.dev/${1}` with 301 and preserve query string
 
 Next Content To-Dos
 -------------------
