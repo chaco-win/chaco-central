@@ -3,8 +3,8 @@ services:
     image: nginx:1.27-alpine
     container_name: chaco_web
     restart: unless-stopped
-    # Run unprivileged on high port with hardening
-    user: "101:101" # nginx user in alpine image
+    # Run with hardening; nginx master runs as root inside container and drops
+    # to 'nginx' user for workers per nginx.conf
     read_only: true
     security_opt:
       - no-new-privileges:true
