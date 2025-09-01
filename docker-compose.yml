@@ -50,7 +50,8 @@ services:
   hugo:
     image: klakegg/hugo:ext-alpine
     working_dir: /src
-    command: ["sh","-lc","hugo mod get && hugo --minify"]
+    entrypoint: ["/bin/sh","-lc"]
+    command: "hugo mod get && hugo --minify"
     volumes:
       - ./site:/src
     # Run with your UID/GID to avoid root-owned files

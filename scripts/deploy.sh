@@ -17,12 +17,20 @@ cd site
 # Resolve user/group IDs robustly (fallback to 1000 if unavailable)
 uid_val="$(id -u 2>/dev/null || echo 1000)"
 gid_val="$(id -g 2>/dev/null || echo 1000)"
+# Run module fetch and build in separate invocations (image entrypoint is 'hugo')
 docker run --rm \
   -u "${uid_val}:${gid_val}" \
   -v "$PWD:/src" \
   -w /src \
   klakegg/hugo:ext-alpine \
-  sh -lc "hugo mod get && hugo"
+  hugo mod get
+
+docker run --rm \
+  -u "${uid_val}:${gid_val}" \
+  -v "$PWD:/src" \
+  -w /src \
+  klakegg/hugo:ext-alpine \
+  hugo
 cd ..
 
 echo "[3/3] Restarting web container..."
