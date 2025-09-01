@@ -20,7 +20,8 @@ publishDir = "public"
   animate = true
 
   [params.theme]
-    # defaultTheme = "auto" # or "light"/"dark"
+    disableThemeToggle = true
+    defaultTheme = "dark"
 
   [params.navbar]
     align = "ms-auto"
@@ -31,10 +32,10 @@ publishDir = "public"
       showOnScrollUp = true
     enableSeparator = false
     [params.navbar.menus]
-      disableAbout = false
+      disableAbout = true
       disableExperience = true
       disableEducation = true
-      disableProjects = false
+      disableProjects = true
       disableAchievements = true
       disableContact = true
 
@@ -84,6 +85,13 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
   [params.projects]
     enable = true
     # Home page cards linking to posts
+    [[params.projects.items]]
+      title = "Certifications"
+      content = "CompTIA Security+, Network+, and A+."
+      image = "/images/projects/certifications.svg"
+      [[params.projects.items.links]]
+        icon = "fas fa-link"
+        url = "/certifications/"
     [[params.projects.items]]
       title = "FAB Events Calendar"
       content = "Dockerized Python scraper syncing events to Google Calendar/iCal with health checks and Discord alerts."
