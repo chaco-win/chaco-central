@@ -23,14 +23,13 @@ docker run --rm \
   -v "$PWD:/src" \
   -w /src \
   klakegg/hugo:ext-alpine \
-  hugo mod get
+  mod get
 
 docker run --rm \
   -u "${uid_val}:${gid_val}" \
   -v "$PWD:/src" \
   -w /src \
-  klakegg/hugo:ext-alpine \
-  hugo
+  klakegg/hugo:ext-alpine
 cd ..
 
 echo "[3/3] Restarting web container..."
