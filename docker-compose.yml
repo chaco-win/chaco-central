@@ -8,14 +8,13 @@ services:
     read_only: true
     security_opt:
       - no-new-privileges:true
-    cap_drop: ["ALL"]
     volumes:
       - ./site/public:/usr/share/nginx/html:ro
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     tmpfs:
-      - /var/cache/nginx:rw,noexec,nosuid,size=64m
+      - /var/cache/nginx:rw,noexec,nosuid,uid=101,gid=101,size=64m
       - /var/run:rw,noexec,nosuid,size=8m
-      - /var/log/nginx:rw,noexec,nosuid,size=8m
+      - /var/log/nginx:rw,noexec,nosuid,uid=101,gid=101,size=8m
     healthcheck:
       test: ["CMD-SHELL", "pidof nginx >/dev/null 2>&1 || exit 1"]
       interval: 30s
