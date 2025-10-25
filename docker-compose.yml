@@ -20,6 +20,9 @@ services:
       interval: 30s
       timeout: 5s
       retries: 3
+    depends_on:
+      hugo:
+        condition: service_completed_successfully
     networks:
       - web_pub
 
@@ -64,7 +67,4 @@ services:
 
 networks:
   web_pub:
-    depends_on:
-      hugo:
-        condition: service_completed_successfully
     driver: bridge

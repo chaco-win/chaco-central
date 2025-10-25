@@ -44,31 +44,28 @@ Quick Start
      - `hugo mod init chaco-central`
      - `hugo mod get github.com/gurusabarish/hugo-profile`
 
-4) Bring up the stack
-   - `docker compose up -d`
-   - No host ports are published. Cloudflared will connect out and serve your hostname via the tunnel.
+4) Bring up the stack (builds first, then starts)
+   - `UID=$(id -u) GID=$(id -g) docker compose up -d`
+   - Compose runs the one-shot `hugo` build, then starts Nginx (`web`) and `cloudflared`.
 
 Local Development Workflow
 --------------------------
-- Edit content in your Hugo project (kept under `site/` in this repo context).
-- Run `hugo` so the static site is written to `site/public/`.
-- Deploy by updating `site/public/` and restarting `web` (if needed):
-  - `docker compose restart web`
+- Edit content in `site/`.
+- Rebuild + restart in one step:
+  - `UID=$(id -u) GID=$(id -g) docker compose up -d`
+  - This rebuilds with `hugo` and then starts the containers.
 
-One-Command Deploy (server)
----------------------------
-- Run `scripts/deploy.sh` on the server to pull, build (Hugo modules + content), and restart Nginx:
-  - `bash scripts/deploy.sh`
-- Equivalent manual steps:
-  - `git pull`
-  - `cd site && docker run --rm -u $(id -u):$(id -g) -v "$PWD:/src" -w /src klakegg/hugo:ext-alpine sh -lc "hugo mod get && hugo" && cd ..`
-  - `docker compose restart web`
+One-Command Recreate (server)
+----------------------------
+- Pull latest, rebuild, and start cleanly:
+  - `docker compose down && UID=$(id -u) GID=$(id -g) docker compose up -d`
+  - This ensures the Hugo build runs before Nginx starts.
 
-Optional: Compose build service
--------------------------------
-- A one-shot `hugo` service is included behind the `build` profile. Use it like this (keeps file ownership correct):
-  - `UID=$(id -u) GID=$(id -g) docker compose run --rm --profile build hugo`
-  - `docker compose restart web`
+Optional: Build only (no restart)
+---------------------------------
+- Rebuild the static files without touching other containers:
+  - `UID=$(id -u) GID=$(id -g) docker compose run --rm hugo`
+  - `docker restart chaco_web`
 
 Notes
 -----
@@ -76,6 +73,12 @@ Notes
 - TLS is handled by Cloudflare; Nginx serves plain HTTP in the internal network.
 - Ensure your Cloudflare DNS record for the hostname is `Proxied` and bound to the tunnel.
 - 8080 already in use? This stack listens on 8081 internally (no host port exposed), so it won’t conflict with other services.
+
+Compose Behavior
+----------------
+- `web` declares `depends_on` the one-shot `hugo` service with condition `service_completed_successfully`.
+- `docker compose up -d` will build the site and then start Nginx and Cloudflared.
+- Simple container restarts do not rebuild; use `up -d` when you want a rebuild.
 
 Canonical URL
 -------------
