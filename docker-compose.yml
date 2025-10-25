@@ -61,7 +61,10 @@ services:
     user: "${UID:-1000}:${GID:-1000}"
     environment:
       - HUGO_ENV=production
-    read_only: true
+    # Hugo needs writable temp/cache during build; keep volume /src writable
+    # If you want extra hardening, add tmpfs mounts instead of read-only rootfs
+    # tmpfs:
+    #   - /tmp:rw,noexec,nosuid,size=64m
     networks:
       - web_pub
 
