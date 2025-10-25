@@ -53,8 +53,8 @@ publishDir = "public"
     [params.hero.button]
       enable = true
       name = "Resume"
-      url = "/about/"
-      download = false
+      url = "/resume/Chase_O_Resume.pdf"
+      download = true
       newPage = false
     [[params.hero.socialLinks.fontAwesomeIcons]]
       icon = "fab fa-github"
