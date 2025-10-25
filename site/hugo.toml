@@ -47,7 +47,7 @@ publishDir = "public"
     title = "Chase Osborne."
     subtitle = "I build resilient homelab and IT automation."
     content = "Hands-on IT pro focused on Docker, networks, identity, and reproducible infrastructure."
-    image = "/images/headshot.png"
+    image = "/images/headshot.jpg"
     [params.hero.bottomImage]
       enable = true
     [params.hero.button]
@@ -66,7 +66,7 @@ publishDir = "public"
   [params.about]
     enable = true
     title = "About / Resume"
-    image = "/images/headshot.png"
+    image = "/images/headshot.jpg"
     content = """
 Hands-on IT professional with 5+ years supporting 200+ users across multi-building operations. Experienced in IT management, automation, and system administration. Skilled in AD, Microsoft 365, and hybrid Exchange, plus self-hosted infrastructure with Docker, Python, and PowerShell.
 """
