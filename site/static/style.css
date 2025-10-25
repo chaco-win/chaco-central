@@ -31,3 +31,11 @@ section#experience .nav-link {
 
 /* Hide theme/footer logo image regardless of path */
 footer img[alt="Footer logo"] { display: none !important; }
+
+/* Navbar brand logo: tidy size and spacing */
+.navbar-brand img {
+  height: 28px;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}

@@ -28,7 +28,7 @@ publishDir = "public"
     align = "ms-auto"
     brandName = "Chaco Central"
     disableSearch = true
-    showBrandLogo = false
+    showBrandLogo = true
     [params.navbar.stickyNavBar]
       enable = true
       showOnScrollUp = true
