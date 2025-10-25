@@ -205,7 +205,7 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
 
   [[menu.main]]
     name = "Projects"
-    url = "/projects/"
+    url = "/#projects"
     weight = 20
 
   [[menu.main]]
@@ -213,7 +213,8 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
     url = "/blogs/"
     weight = 30
 
-  [[menu.main]]
-    name = "Certifications"
-    url = "/certifications/"
-    weight = 40
+  # Temporarily hide Certifications from the navbar
+  # [[menu.main]]
+  #   name = "Certifications"
+  #   url = "/certifications/"
+  #   weight = 40
