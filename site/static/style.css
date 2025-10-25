@@ -29,5 +29,5 @@ section#experience .nav-link {
   section#experience .nav-link { font-size: 0.95rem; }
 }
 
-/* Hide theme's default pink Hugo logo image if rendered in footer */
-footer img[src$="/fav.png"] { display: none !important; }
+/* Hide theme/footer logo image regardless of path */
+footer img[alt="Footer logo"] { display: none !important; }

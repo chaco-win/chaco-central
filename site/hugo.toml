@@ -16,7 +16,7 @@ publishDir = "public"
 [params]
   title = "Chaco Central"
   description = "Personal portfolio + technical blog: homelab, Docker, networks, and projects."
-  favicon = "/fav.png"
+  favicon = "/images/fav.png"
   animate = true
   customCSS = true
 
