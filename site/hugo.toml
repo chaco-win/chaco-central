@@ -44,7 +44,7 @@ publishDir = "public"
 
   [params.hero]
     enable = true
-    intro = "Hi, I’m"
+    intro = "Hi, I'm"
     title = "Chase Osborne."
     subtitle = "I build resilient homelab and IT automation."
     content = "Hands-on IT pro focused on Docker, networks, identity, and reproducible infrastructure."
@@ -229,3 +229,4 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
   #   name = "Certifications"
   #   url = "/certifications/"
   #   weight = 60
+
