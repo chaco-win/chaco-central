@@ -6,9 +6,9 @@ summary: "Building a Dockerized automation that scrapes Flesh and Blood events, 
 draft: false
 ---
 
-After getting my network and server dialed in, I wanted to put that stability to work doing something useful ? something that solved a real problem I deal with every week.
+After getting my network and server dialed in, I wanted to put that stability to work doing something useful - something that solved a real problem I deal with every week.
 
-For anyone in the Flesh and Blood TCG community, the official event site lists everything, but it is not designed for quick reference or notifications. I wanted one unified, automatically updating calendar ? something I could subscribe to on my phone or share with my playgroup.
+For anyone in the Flesh and Blood TCG community, the official event site lists everything, but it is not designed for quick reference or notifications. I wanted one unified, automatically updating calendar - something I could subscribe to on my phone or share with my playgroup.
 
 GitHub: https://github.com/chaco-win/fab-events-sync  
 Live calendar: https://fabevents.chaco.dev
@@ -102,11 +102,11 @@ Traceback: 'NoneType' object has no attribute 'find'
 Next phase: a public Discord bot anyone can invite. It will use the same backend but expose slash commands.
 
 Planned features:
-- /fab upcoming ? list upcoming events by region or format
-- /fab subscribe ? subscribe to notifications for types/regions
-- /fab remind ? automated reminders (e.g., Monday before)
-- /fab optout ? unsubscribe from categories
-- /fab health ? scraper uptime and last update status
+- /fab upcoming - list upcoming events by region or format
+- /fab subscribe - subscribe to notifications for types/regions
+- /fab remind - automated reminders (e.g., Monday before)
+- /fab optout - unsubscribe from categories
+- /fab health - scraper uptime and last update status
 
 ## Challenges and Lessons Learned
 
@@ -119,10 +119,10 @@ Planned features:
 
 - Hosted in Docker on mirrored ZFS for redundancy
 - Uses Pi-hole for DNS and logging visibility
-- Exposed securely through Cloudflare Tunnel ? no open ports
+- Exposed securely through Cloudflare Tunnel - no open ports
 - Snapshotted and backed up weekly
 
-It is stable, isolated, and low-maintenance ? exactly what I wanted.
+It is stable, isolated, and low-maintenance - exactly what I wanted.
 
 ## Looking Ahead
 
