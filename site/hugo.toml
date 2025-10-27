@@ -4,6 +4,13 @@ title = "Chaco Central"
 enableRobotsTXT = true
 publishDir = "public"
 
+[frontmatter]
+  # Ensure pages without explicit tags still have an empty list so
+  # theme templates that iterate over .Params.tags do not fail.
+  [[frontmatter.defaults]]
+    [frontmatter.defaults.values]
+      tags = []
+
 [module]
   [[module.imports]]
     path = "github.com/gurusabarish/hugo-profile"
