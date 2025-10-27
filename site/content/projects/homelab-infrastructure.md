@@ -6,6 +6,7 @@ image: "/images/projects/homelab.svg"
 _build:
   list: false
   render: true
+date: 2025-07-05
 ---
 
 Overview
@@ -23,8 +24,7 @@ Highlights
 
 Related blog posts
 
-- OPNsense router and VLANs: /blogs/building-my-opnsense-router/
-- Home server build and ZFS: /blogs/building-my-home-server/
-- Network layout and services: /blogs/building-my-network/
-- Redundancy by design: /blogs/redundancy-by-design/
-
+- [Building My OPNsense Router](/blogs/building-my-opnsense-router/)
+- [Building My Home Server: ZFS, Docker, and GitHub Automation](/blogs/building-my-home-server/)
+- [Building My Network: VLANs, Segmentation, and Wi-Fi Integration](/blogs/building-my-network/)
+- [Redundancy by Design: Local Snapshots, Off-Site Backups, and Cloud Failsafes](/blogs/redundancy-by-design/)

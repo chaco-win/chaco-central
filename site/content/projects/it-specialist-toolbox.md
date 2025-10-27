@@ -6,6 +6,7 @@ image: "/images/projects/password-tool.svg"
 _build:
   list: false
   render: true
+date: 2025-06-01
 ---
 
 Overview
@@ -17,9 +18,10 @@ Examples
 
 - Password generation and rotation helpers
 - AD user/group cleanup and reporting
-- Windows Server diagnostics and quick‑fix routines
+- Windows Server diagnostics and quick-fix routines
 - Deployment and bootstrap scripts
 
 Links
 
 - GitHub repositories: https://github.com/chaco-win?tab=repositories
+
