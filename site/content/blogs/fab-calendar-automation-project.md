@@ -1,4 +1,4 @@
-﻿---
+---
 title: "FAB Calendar Automation Project: Automating the Flesh and Blood Event Feed"
 date: 2025-09-10
 tags: ["homelab", "automation", "docker", "github", "fabtcg", "discord"]
@@ -6,12 +6,19 @@ summary: "Building a Dockerized automation that scrapes Flesh and Blood events, 
 draft: false
 ---
 
-After getting my network and server dialed in, I wanted to put that stability to work doing something useful — something that solved a real problem I deal with every week.
+After getting my network and server dialed in, I wanted to put that stability to work doing something useful � something that solved a real problem I deal with every week.
 
-For anyone in the Flesh and Blood TCG community, the official event site lists everything, but it isn’t designed for quick reference or notifications. I wanted one unified, automatically updating calendar — something I could subscribe to on my phone or share with my playgroup.
+For anyone in the Flesh and Blood TCG community, the official event site lists everything, but it isn�t designed for quick reference or notifications. I wanted one unified, automatically updating calendar � something I could subscribe to on my phone or share with my playgroup.
 
 GitHub: [github.com/chaco-win/fab-events-sync](https://github.com/chaco-win/fab-events-sync)  
 Live calendar: [fabevents.chaco.dev](https://fabevents.chaco.dev)
+## Why This Project
+
+- One place to see competitive events without digging through pages.
+- Shareable, phone-friendly calendar that updates itself.
+- Discord notifications so groups stay informed automatically.
+- Built to run unattended: containers, health checks, and logs.
+
 
 ## The Goal
 
@@ -30,14 +37,14 @@ A small Docker Compose stack on my home server:
 
 ```text
 /srv/docker/fab-calendar/
-├── docker-compose.yml
-├── scraper/
-│   ├── main.py
-│   └── requirements.txt
-└── logs/
++-- docker-compose.yml
++-- scraper/
+�   +-- main.py
+�   +-- requirements.txt
++-- logs/
 ```
 
-The scraper handles scraping, parsing, and syncing via the Google Calendar API. It’s lightweight, stateless, and auto-restarts if something fails.
+The scraper handles scraping, parsing, and syncing via the Google Calendar API. It�s lightweight, stateless, and auto-restarts if something fails.
 
 ```yaml
 services:
@@ -54,7 +61,7 @@ services:
 ## How It Works
 
 1) Scraping  
-Pulls FABTCG’s event listings and parses them into structured JSON. Filters by format (ProQuest, Battle Hardened, Nationals) and skips duplicates.
+Pulls FABTCG�s event listings and parses them into structured JSON. Filters by format (ProQuest, Battle Hardened, Nationals) and skips duplicates.
 
 2) Calendar Sync  
 Authenticates through a Google service account and updates the shared public calendar at fabevents.chaco.dev.
@@ -84,7 +91,7 @@ If anything fails, a Discord notification fires automatically.
 
 When events are updated:
 ```text
-📅 FAB Calendar Updated
+?? FAB Calendar Updated
 3 new events found:
 - ProQuest: Dallas, TX
 - Battle Hardened: Sydney, AUS
@@ -93,20 +100,20 @@ When events are updated:
 
 If the scraper fails:
 ```text
-⚠️ FAB Calendar ERROR
+?? FAB Calendar ERROR
 Traceback: 'NoneType' object has no attribute 'find'
 ```
 
 ## Future Plans: Public Discord Bot
 
-Next phase: a public Discord bot anyone can invite. It’ll use the same backend but expose slash commands.
+Next phase: a public Discord bot anyone can invite. It�ll use the same backend but expose slash commands.
 
 Planned features:
-- /fab upcoming — list upcoming events by region or format
-- /fab subscribe — subscribe to notifications for types/regions
-- /fab remind — automated reminders (e.g., Monday before)
-- /fab optout — unsubscribe from categories
-- /fab health — scraper uptime and last update status
+- /fab upcoming � list upcoming events by region or format
+- /fab subscribe � subscribe to notifications for types/regions
+- /fab remind � automated reminders (e.g., Monday before)
+- /fab optout � unsubscribe from categories
+- /fab health � scraper uptime and last update status
 
 ## Challenges and Lessons Learned
 
@@ -119,10 +126,10 @@ Planned features:
 
 - Hosted in Docker on mirrored ZFS for redundancy
 - Uses Pi-hole for DNS and logging visibility
-- Exposed securely through Cloudflare Tunnel — no open ports
+- Exposed securely through Cloudflare Tunnel � no open ports
 - Snapshotted and backed up weekly
 
-It’s stable, isolated, and low-maintenance — exactly what I wanted.
+It�s stable, isolated, and low-maintenance � exactly what I wanted.
 
 ## Looking Ahead
 
