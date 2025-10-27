@@ -49,3 +49,6 @@ a[href*="api.whatsapp.com/send"] {
 
 /* Blog post/share blocks: hide networks we don't use site-wide */
 a[href*='twitter.com/share'],a[aria-label='twitter'],i.fa-twitter,i.fab.fa-twitter,a[href*='api.whatsapp.com/send'],a[aria-label='whatsapp'],i.fa-whatsapp,i.fab.fa-whatsapp{display:none !important;}
+
+/* Hide social share sidebar on all posts */
+aside.social { display: none !important; }
