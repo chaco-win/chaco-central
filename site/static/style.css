@@ -39,3 +39,10 @@ footer img[alt="Footer logo"] { display: none !important; }
   margin-right: 8px;
   vertical-align: middle;
 }
+
+/* Blog post: hide share icons we don't use */
+/* Hide Twitter and WhatsApp share buttons in post pages */
+a[href*="twitter.com/share"],
+a[href*="api.whatsapp.com/send"] {
+  display: none !important;
+}

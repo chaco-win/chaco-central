@@ -70,6 +70,9 @@ publishDir = "public"
     [[params.hero.socialLinks.fontAwesomeIcons]]
       icon = "fab fa-linkedin"
       url = "https://www.linkedin.com/in/chase-osborne-5a5a4120a/"
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fas fa-envelope"
+      url = "mailto:chaseo-work@protonmail.com"
 
   [params.about]
     enable = true
