@@ -28,3 +28,7 @@ Related blog posts
 - [Building My Home Server: ZFS, Docker, and GitHub Automation](/blogs/building-my-home-server/)
 - [Building My Network: VLANs, Segmentation, and Wi-Fi Integration](/blogs/building-my-network/)
 - [Redundancy by Design: Local Snapshots, Off-Site Backups, and Cloud Failsafes](/blogs/redundancy-by-design/)
+
+Links
+
+- GitHub (projects and configs): https://github.com/chaco-win?tab=repositories

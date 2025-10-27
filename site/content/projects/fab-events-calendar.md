@@ -25,3 +25,7 @@ Read more
 
 - [FAB Calendar Automation Project: Automating the Flesh and Blood Event Feed](/blogs/fab-calendar-automation-project/)
 
+Links
+
+- GitHub: https://github.com/chaco-win/fab-events-sync
+- Live site: https://fabevents.chaco.dev

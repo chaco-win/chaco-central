@@ -24,4 +24,3 @@ Examples
 Links
 
 - GitHub repositories: https://github.com/chaco-win?tab=repositories
-
