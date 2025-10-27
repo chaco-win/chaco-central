@@ -100,7 +100,11 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
     # Front Page Projects (exactly these three)
     [[params.projects.items]]
       title = "Homelab Infrastructure"
-      content = "Ubuntu + ZFS, Pi-hole/Unbound, PiKVM, OPNsense VLAN segmentation, automated backups, and off-site replication."
+      content = """
+      Your backbone project — the full stack of your home server, router, and network.
+      Ubuntu + ZFS, Pi-hole/Unbound, PiKVM, OPNsense, VLAN segmentation, automated backups, and off-site replication.
+      It demonstrates design, redundancy, automation, and long-term planning — exactly what infrastructure pros look for.
+      """
       image = "/images/projects/homelab.svg"
       [[params.projects.items.links]]
         icon = "fas fa-link"
@@ -108,7 +112,10 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
 
     [[params.projects.items]]
       title = "FAB Events Calendar"
-      content = "A Dockerized Python automation that scrapes Flesh and Blood TCG events, syncs them to Google Calendar/iCal, and sends Discord alerts with health checks."
+      content = """
+      A Dockerized Python automation that scrapes Flesh and Blood TCG events, syncs them to Google Calendar, and sends Discord alerts with health checks.
+      It’s a real-world, production-grade tool showing your ability to integrate APIs, automate workflows, and maintain uptime through monitoring and alerting.
+      """
       image = "/images/projects/fab-events.svg"
       [[params.projects.items.links]]
         icon = "fas fa-link"
@@ -116,7 +123,10 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
 
     [[params.projects.items]]
       title = "IT Specialist Toolbox"
-      content = "A curated collection of scripts, utilities, and workflows used daily for IT management and sysadmin work: PowerShell automations, Windows Server diagnostics, AD cleanup tools, and deployment scripts."
+      content = """
+      A curated collection of scripts, utilities, and workflows you use daily as an IT manager and sysadmin.
+      PowerShell automations, Windows Server diagnostics, Active Directory cleanup tools, and custom deployment scripts — everything built to make IT life cleaner, faster, and more reliable.
+      """
       image = "/images/projects/password-tool.svg"
       [[params.projects.items.links]]
         icon = "fas fa-link"
