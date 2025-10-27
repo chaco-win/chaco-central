@@ -2,6 +2,10 @@
 title: "FAB Events Calendar"
 description: "Dockerized Python automation that scrapes FAB TCG events, publishes a calendar, and posts Discord alerts with health checks."
 tags: ["python", "docker", "automation"]
+image: "/images/projects/fab-events.svg"
+_build:
+  list: false
+  render: true
 ---
 
 Overview
@@ -19,4 +23,3 @@ Highlights
 Read more
 
 - Project write‑up: /blogs/fab-calendar-automation-project/
-

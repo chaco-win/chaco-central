@@ -2,6 +2,10 @@
 title: "IT Specialist Toolbox"
 description: "Curated scripts, utilities, and workflows for daily IT management and sysadmin work."
 tags: ["powershell", "windows", "automation"]
+image: "/images/projects/password-tool.svg"
+_build:
+  list: false
+  render: true
 ---
 
 Overview
@@ -19,4 +23,3 @@ Examples
 Links
 
 - GitHub repositories: https://github.com/chaco-win?tab=repositories
-
