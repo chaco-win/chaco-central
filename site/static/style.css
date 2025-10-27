@@ -52,3 +52,6 @@ a[href*='twitter.com/share'],a[aria-label='twitter'],i.fa-twitter,i.fab.fa-twitt
 
 /* Hide social share sidebar on all posts */
 aside.social { display: none !important; }
+
+/* Hide horizontal rules inside post content */
+article.page-content hr,.page-content hr{display:none !important;}
