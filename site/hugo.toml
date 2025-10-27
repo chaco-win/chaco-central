@@ -97,28 +97,30 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
 
   [params.projects]
     enable = true
-    # Home page cards linking to posts
-    [[params.projects.items]]
-      title = "FAB Events Calendar"
-      content = "Dockerized Python scraper syncing events to Google Calendar/iCal with health checks and Discord alerts."
-      image = "/images/projects/fab-events.svg"
-      [[params.projects.items.links]]
-        icon = "fas fa-link"
-        url = "/blogs/fab-events-calendar/"
-    [[params.projects.items]]
-      title = "Password Automation Tool"
-      content = "Production PowerShell to generate secure, memorable onboarding passwords."
-      image = "/images/projects/password-tool.svg"
-      [[params.projects.items.links]]
-        icon = "fas fa-link"
-        url = "/blogs/password-automation-tool/"
+    # Front Page Projects (exactly these three)
     [[params.projects.items]]
       title = "Homelab Infrastructure"
-      content = "Ubuntu + ZFS, Pi-hole/Unbound, PiKVM, OPNsense, VLANs, backups, offsite replication."
+      content = "Ubuntu + ZFS, Pi-hole/Unbound, PiKVM, OPNsense VLAN segmentation, automated backups, and off-site replication."
       image = "/images/projects/homelab.svg"
       [[params.projects.items.links]]
         icon = "fas fa-link"
-        url = "/blogs/homelab-overview/"
+        url = "/projects/homelab-infrastructure/"
+
+    [[params.projects.items]]
+      title = "FAB Events Calendar"
+      content = "A Dockerized Python automation that scrapes Flesh and Blood TCG events, syncs them to Google Calendar/iCal, and sends Discord alerts with health checks."
+      image = "/images/projects/fab-events.svg"
+      [[params.projects.items.links]]
+        icon = "fas fa-link"
+        url = "/projects/fab-events-calendar/"
+
+    [[params.projects.items]]
+      title = "IT Specialist Toolbox"
+      content = "A curated collection of scripts, utilities, and workflows used daily for IT management and sysadmin work: PowerShell automations, Windows Server diagnostics, AD cleanup tools, and deployment scripts."
+      image = "/images/projects/password-tool.svg"
+      [[params.projects.items.links]]
+        icon = "fas fa-link"
+        url = "/projects/it-specialist-toolbox/"
 
 [params.achievements]
   enable = true
