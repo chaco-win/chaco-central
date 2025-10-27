@@ -219,11 +219,6 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
     url = "/blogs/"
     weight = 40
 
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 50
-
   # Temporarily hide Certifications from the navbar
   # [[menu.main]]
   #   name = "Certifications"
