@@ -55,3 +55,15 @@ aside.social { display: none !important; }
 
 /* Hide horizontal rules inside post content */
 article.page-content hr,.page-content hr{display:none !important;}
+
+/* Make Projects cards clickable across the entire tile using the first link */
+section#projects .card { position: relative; }
+section#projects .card .card-footer a {
+  position: absolute;
+  inset: 0;              /* top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;            /* keep UI unchanged */
+}
+section#projects .card:hover { cursor: pointer; }
