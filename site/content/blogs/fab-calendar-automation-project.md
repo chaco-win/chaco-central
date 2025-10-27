@@ -60,17 +60,10 @@ services:
 
 ## How It Works
 
-1) Scraping  
-Pulls FABTCG’s event listings and parses them into structured JSON. Filters by format (ProQuest, Battle Hardened, Nationals) and skips duplicates.
-
-2) Calendar Sync  
-Authenticates through a Google service account and updates the shared public calendar at fabevents.chaco.dev.
-
-3) Discord Notifications  
-When new events are detected, posts a formatted message to Discord using a webhook or bot token.
-
-4) Health Monitoring  
-Each run logs to /logs/fab-calendar.log and records its status for weekly health checks.
+1. Scraping: Pulls FABTCG\'s event listings and parses them into structured JSON. Filters by format (ProQuest, Battle Hardened, Nationals) and skips duplicates.
+2. Calendar Sync: Authenticates with a Google service account and updates the shared public calendar at fabevents.chaco.dev.
+3. Discord Notifications: Posts a formatted message to Discord via webhook or bot token when new events are detected.
+4. Health Monitoring: Logs to /logs/fab-calendar.log and records status for weekly health checks.
 
 ## Weekly Health Checks
 
@@ -91,7 +84,7 @@ If anything fails, a Discord notification fires automatically.
 
 When events are updated:
 ```text
-?? FAB Calendar Updated
+FAB Calendar Updated
 3 new events found:
 - ProQuest: Dallas, TX
 - Battle Hardened: Sydney, AUS
@@ -100,7 +93,7 @@ When events are updated:
 
 If the scraper fails:
 ```text
-?? FAB Calendar ERROR
+FAB Calendar ERROR
 Traceback: 'NoneType' object has no attribute 'find'
 ```
 
