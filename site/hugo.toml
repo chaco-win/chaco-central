@@ -104,6 +104,7 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
       Home server and network stack: Ubuntu host with ZFS mirror (snapshots, send/receive), Pi-hole + Unbound, PiKVM, and an OPNsense router with VLAN segmentation. Automated backups and Cloudflare Tunnel provide safe remote access.
       """
       image = "/images/projects/homelab.svg"
+      url = "/projects/homelab-infrastructure/"
       [[params.projects.items.links]]
         icon = "fas fa-link"
         url = "/projects/homelab-infrastructure/"
@@ -114,6 +115,7 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
       Dockerized Python service that scrapes Flesh and Blood TCG events, normalizes data, publishes Google Calendar and iCal feeds, and posts Discord notifications. Includes a scheduled health-check to verify successful runs.
       """
       image = "/images/projects/fab-events.svg"
+      url = "/projects/fab-events-calendar/"
       [[params.projects.items.links]]
         icon = "fas fa-link"
         url = "/projects/fab-events-calendar/"
@@ -124,6 +126,7 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
       PowerShell utilities for Windows Server and Active Directory: password generation/rotation, AD cleanup and reporting, diagnostics, and deployment scripts. Backed by public repositories and usage notes.
       """
       image = "/images/projects/password-tool.svg"
+      url = "/projects/it-specialist-toolbox/"
       [[params.projects.items.links]]
         icon = "fas fa-link"
         url = "/projects/it-specialist-toolbox/"
