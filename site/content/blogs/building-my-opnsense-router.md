@@ -1,7 +1,9 @@
+---
 title: "Building My OPNsense Router"
 date: 2025-07-05
-tags: ["homelab", "router", "opnsense", "zfs", "networking"]
+tags: ["network", "opnsense", "router", "zfs"]
 summary: "Replacing the AT&T gateway with a custom OPNsense router for full control, reliability, and visibility."
+draft: false
 ---
 When I started rebuilding my home network this summer, one of the first things I wanted to fix was the router situation. The AT&T gateway worked fine for basic internet access, but it was locked down, unpredictable, and didn’t give me anywhere near the control or visibility I wanted. So I built my own router — running OPNsense on a Dell OptiPlex Micro with mirrored drives and ZFS for reliability.
 
