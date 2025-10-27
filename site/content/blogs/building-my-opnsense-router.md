@@ -64,9 +64,59 @@ The bootloader path on this box is:
 
 ZFSBootMenu gives me a simple recovery layer if an update goes sideways. It’s minimal, stable, and easy to replicate.
 
+## Why OPNsense
+
+- Clean, modern UI with frequent releases and an active plugin ecosystem.
+- First‑class features out of the box: WireGuard/OpenVPN, Unbound DNS, Suricata IDS/IPS, VLANs, traffic shaper/QoS.
+- Visibility and troubleshooting: live firewall states, packet capture, searchable logs, built‑in health graphs.
+- Automation‑friendly: backup/restore, API hooks, and ACME/Let’s Encrypt integration.
+
+Alternatives considered
+- pfSense: similar capability. I preferred OPNsense’s release cadence and plugin flexibility.
+- Ubiquiti (USG/UXG/UDM): great UI/APs, but fewer advanced firewall features and limited on‑box control.
+- MikroTik: powerful, but steeper learning curve for my goals.
+- Consumer routers: inconsistent updates, limited VLAN/IDS, and poor observability.
+
+## Why a ZFS Mirror (Redundancy)
+
+- Fault tolerance: survive a single disk failure with no downtime.
+- Data integrity: end‑to‑end checksums detect/correct bit rot; scrubs keep pools healthy.
+- Snapshots/rollbacks: snapshot configs and quickly revert after an update or change.
+- Fast resilver: mirrors rebuild faster than parity RAID for small OS pools.
+- Works well with ZFSBootMenu for safe updates and quick recovery.
+
+Mirror vs. RAIDZ1
+- Router workload is small random I/O; a 2‑disk mirror is simpler and quicker to resilver.
+- OS + configs are tiny; parity adds complexity without benefit here.
+
+Operational bits
+
+```bash
+# health
+zpool status
+
+# monthly scrub (cron)
+zpool scrub zroot
+```
+
+```bash
+# /etc/zfs/zed.d/zed.rc (email alerts)
+ZED_EMAIL_ADDR="myemail@example.com"
+ZED_NOTIFY_VERBOSE=1
+```
+
+## Hardware Choices: Dual NIC via M.2 adapter
+
+The OptiPlex Micro only exposes one onboard Ethernet port. To meet the WAN/LAN split without USB dongles, I added a low‑profile M.2‑to‑NIC adapter:
+
+- Form factor: keeps everything inside the case; no dangling USB.
+- Throughput and drivers: Intel‑based NIC presents reliable performance and native driver support in BSD.
+- Power/thermals: minimal draw; stays within the chassis thermal envelope.
+
+This let me dedicate `wan` to the ONT and `lan` to the trunked switch, with VLANs layered on the LAN side.
+
 ## Results
 
 This turned the router from a black box into an observable, dependable part of the network. I can SSH in, snapshot and back up configs, and graph performance alongside the rest of the environment. If a drive dies, power blips, or the gateway reboots, it comes back up clean.
 
 Next up: finishing the main server build with ZFS, Docker Compose, and GitHub‑based configuration.
-
