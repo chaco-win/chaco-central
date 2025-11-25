@@ -53,8 +53,8 @@ publishDir = "public"
     enable = true
     intro = "Hi, I'm"
     title = "Chase Osborne."
-    subtitle = "Infrastructure, automation, and network engineering."
-    content = "Systems and network engineer focused on identity, automation, and container platforms."
+    subtitle = "Systems Administrator"
+    content = "Systems Administrator with 4+ years supporting hybrid Windows and Linux environments for 200+ users. Skilled in AD, Microsoft 365, Azure AD, scripting, deployments, and troubleshooting across on-prem and cloud infrastructure."
     image = "/images/headshot.jpg"
     [params.hero.bottomImage]
       enable = true
@@ -79,7 +79,7 @@ publishDir = "public"
     title = "About / Resume"
     image = "/images/headshot.jpg"
     content = """
-Hands-on IT professional with 5+ years supporting 200+ users across multi-building operations. Experienced in IT management, automation, and system administration. Skilled in AD, Microsoft 365, and hybrid Exchange, plus self-hosted infrastructure with Docker, Python, and PowerShell.
+Systems Administrator with 4+ years supporting hybrid Windows and Linux environments for 200+ users. Skilled in Active Directory, Microsoft 365, Azure AD, scripting, deployments, and troubleshooting. Interested in automation, monitoring, and growing DevOps/AWS experience.
 """
     [params.about.skills]
       enable = true
@@ -161,62 +161,44 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
   enable = true
 
   [[params.experience.items]]
-    job = "IT Manager"
+    job = "Lead Systems Administrator"
     company = "Sovereign Pharmaceuticals"
-    date = "Sept 2023 – Jul 2025, Fort Worth, TX"
+    date = "Sep 2023 - Jul 2025, Fort Worth, TX"
     content = """
-- Led IT operations for 200+ users across 5 buildings, managing identity, infrastructure, and support while reporting to MSP.
-- Administered Active Directory, O365 hybrid Exchange, and Microsoft licensing.
-- Automated tasks with PowerShell & Python, including password generation and monitoring scripts with cron jobs + Discord alerts.
-- Deployed laptops, desktops, and printers; managed ERP (Forth Shift) and Empower chromatography software.
-- Oversaw vendor coordination (Sharp, Waters) and site-level procurement (~20 laptops annually, $1K/month consumables).
-- Implemented security cameras, cabling, and MDF/IDF layouts during site renovations.
+- Supported 200+ users across five buildings, maintaining desktops, servers, Microsoft 365, Azure AD, and on-prem AD.
+- Assisted with tenant migration and SAP ERP rollout, handling user transitions, access provisioning, Group Policy updates, and troubleshooting.
+- Improved workstation imaging and deployment consistency.
+- Streamlined user onboarding and access setup.
+- Strengthened documentation and troubleshooting guides.
 """
 
   [[params.experience.items]]
     job = "IT Support Specialist"
     company = "Sovereign Pharmaceuticals"
-    date = "Feb 2022 – Sept 2023, Fort Worth, TX"
+    date = "Feb 2022 - Sep 2023, Fort Worth, TX"
     content = """
-- Provided Tier 1–2 support for 200+ users and 230+ systems, resolving 200+ tickets monthly while maintaining SLAs.
-- Administered Microsoft 365, Azure AD, and Exchange identity provisioning.
-- Reduced PC deployment time by 40% through automation and documentation.
-- Supported Microsoft 365 tenant migration and site integrations.
-- Configured VPNs and supported new site acquisitions.
+- Provided Tier 1-2 support in a hybrid environment, resolving daily user issues, improving documentation, and streamlining PC deployments.
+- Managed identity tasks and Microsoft 365 administration; assisted with onboarding, hardware setup, and site integrations.
+- Collaborated with senior staff on escalations to ensure quick resolution.
+- Supported software rollouts and basic application configuration.
 """
 
   [[params.experience.items]]
-    job = "Account Support"
+    job = "Account Support Specialist"
     company = "PRA Group"
-    date = "Aug 2021 – Feb 2022, North Richland Hills, TX"
+    date = "Aug 2021 - Feb 2022, North Richland Hills, TX"
     content = """
-- Assisted customers with account access issues via live chat (3 concurrent sessions) and email.
-- Guided users through secure account updates and payment plan setup.
-- Balanced high-volume workload of live support and email queues while maintaining accuracy.
-- Delivered Tier 1 troubleshooting and escalations in compliance-driven environment.
+- Provided account support, customer service, and issue resolution for incoming client inquiries.
+- Handled account updates, data verification, and documentation while maintaining accuracy and professionalism.
 """
 
   [[params.experience.items]]
-    job = "Dept Manager"
-    company = "Walmart"
-    date = "2018 – 2021, Multiple Locations"
+    job = "Various Roles - Team Lead, Trainer, Sales"
+    company = "Walmart & 7-Eleven"
+    date = "Jun 2018 - Aug 2021, Multiple Locations"
     content = """
-- Promoted from stocker to consumables manager during COVID, leading a 10-person team and serving as overnight manager for 30+ associates.
-- Directed store-wide operations 2 nights per week as highest-ranking manager.
-- Managed high-demand consumables (toilet paper, sanitizer, wipes) during pandemic shortages.
-- Sent to underperforming stores to stabilize operations and improve compliance.
-- Trained staff, oversaw merchandising, price changes, and holiday/seasonal displays.
-"""
-
-  [[params.experience.items]]
-    job = "Shift Supervisor"
-    company = "7-Eleven"
-    date = "2017 – 2018"
-    content = """
-- Promoted from stocker to keyholder within weeks, entrusted with opening/closing store operations independently.
-- Handled cash accountability, including ATM deposits, bank drops, and vendor checks.
-- Ordered seasonal products, managed vendor deliveries, and prepared store for promotions.
-- Conducted loss-prevention activities including camera footage review.
+- Handled customer service, cash management, inventory tasks, and daily operations across high-volume retail and service roles.
+- Maintained accuracy, communication, and reliability while leading shifts and supporting staff training.
 """
 
 [menu]
@@ -245,3 +227,6 @@ Hands-on IT professional with 5+ years supporting 200+ users across multi-buildi
   #   name = "Certifications"
   #   url = "/certifications/"
   #   weight = 60
+
+
+
