@@ -140,7 +140,7 @@ IT support professional with 4+ years of hands-on experience resolving end-user 
       content = """
       Independent trading card resale business with custom VBA tooling in Excel: market-based dynamic repricing, excess stock tracking, staple floor overrides, and inventory management — all automated and running without manual calculation.
       """
-      image = "/images/projects/password-tool.svg"
+      image = "/images/projects/tcg-resale.svg"
       url = "/projects/tcg-resale/"
       [[params.projects.items.links]]
         icon = "fas fa-link"

@@ -1,8 +1,8 @@
 ---
 title: "TCG Resale & Automation"
-description: "Independent trading card resale business with custom VBA tooling for dynamic repricing, inventory management, and market-based price calculations."
+description: "Independent trading card resale business on TCGPlayer with custom VBA tooling for dynamic repricing based on market data, inventory depth, sales velocity, and rarity-based markups."
 tags: ["vba", "excel", "automation", "business"]
-image: "/images/projects/password-tool.svg"
+image: "/images/projects/tcg-resale.svg"
 _build:
   list: false
   render: true
@@ -11,21 +11,36 @@ date: 2025-10-01
 
 ## Overview
 
-An independent trading card (TCG) resale business with a custom automation layer built in Excel VBA. Instead of manually tracking prices and inventory, I built a suite of tools that handle the repetitive work automatically.
+An independent trading card resale business operating primarily on TCGPlayer, with a custom Excel VBA automation layer built to handle the parts that don't scale manually — specifically repricing.
 
-## What It Does
+The core of the tooling is a dynamic repricing engine that takes multiple inputs and outputs updated prices across the inventory without manual calculation.
 
-- **Dynamic repricing** — market-based price calculations that update inventory prices based on current market data.
-- **Excess stock tracking** — flags overstock items and suggests adjustments to move inventory efficiently.
-- **Staple floor overrides** — protects high-demand staples from being underpriced by enforcing minimum floor prices.
-- **Inventory management** — centralized workbook for tracking stock levels, cost basis, and order fulfillment status.
+## The Repricing Engine
+
+Manually keeping prices competitive across a large inventory isn't realistic. The VBA tool pulls together several factors and calculates a target price for each card:
+
+- **Current low** — what the market floor looks like right now on TCGPlayer
+- **Market price** — the rolling average buyers are actually paying
+- **Quantity on hand** — more copies = more aggressive pricing; low stock = less pressure to undercut
+- **Sales velocity** — time since last sale; stale listings get nudged down, fast movers get room to hold price
+- **Cost basis & rarity** — floor prices and markup percentages are tiered by rarity and what was paid, so high-value or expensive-to-source cards are protected from accidental underpricing
+- **Staple floors** — certain high-demand cards get a hard minimum regardless of market conditions
+
+The result: one run of the tool and the entire inventory reprices itself based on current conditions rather than gut feel or manual comparisons.
+
+## Inventory Management
+
+Beyond pricing, the tooling tracks:
+
+- Stock levels and restock needs
+- Excess inventory flags for cards that have sat too long
+- Cost basis per card for margin visibility
+- Order fulfillment status
 
 ## Why VBA
 
-Excel VBA was the right tool here — the business already lived in spreadsheets, and VBA let me automate within that existing workflow without introducing external dependencies or a new platform. The result is a self-contained system that runs without any setup beyond opening the file.
+The business already lived in Excel. VBA let me automate directly within that workflow without adding external tools, APIs, or dependencies. The entire system is self-contained — open the file, run the tool, prices are updated.
 
-## Business Operations
+## Platform
 
-- Manage inventory, pricing, and order fulfillment end-to-end.
-- Source cards based on market trends and restock based on velocity data.
-- The automation layer frees up time from repetitive repricing and tracking tasks so focus stays on sourcing and fulfillment.
+Sold exclusively on **TCGPlayer**. Inventory spans multiple TCG titles, primarily Flesh and Blood.

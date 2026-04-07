@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <rect width="400" height="200" fill="#111827"/>
+  <!-- Card stack suggestion -->
+  <rect x="155" y="55" width="70" height="90" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="165" y="48" width="70" height="90" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="175" y="41" width="70" height="90" rx="5" fill="#1d3461" stroke="#60a5fa" stroke-width="1.5"/>
+  <!-- Card face detail -->
+  <rect x="182" y="50" width="56" height="35" rx="2" fill="#2563eb" opacity="0.5"/>
+  <line x1="182" y1="93" x2="238" y2="93" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+  <line x1="182" y1="100" x2="230" y2="100" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+  <line x1="182" y1="107" x2="220" y2="107" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+  <text x="50%" y="88%" dominant-baseline="middle" text-anchor="middle" fill="#e5e7eb" font-family="Segoe UI, Roboto, Arial" font-size="14">TCG Resale &amp; Automation</text>
+</svg>
