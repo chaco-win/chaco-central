@@ -6,76 +6,65 @@ Chase Osborne
 
 📍 Haltom City, TX | 📧 chaseo-work@protonmail.com | 📱 817-487-1003
 
-LinkedIn | GitHub
+[GitHub](https://github.com/chaco-win) | [LinkedIn](https://www.linkedin.com/in/chase-osborne-5a5a4120a/)
 
-Summary
+## Summary
 
-Hands-on IT professional with 5+ years of experience supporting 200+ users across multi-building operations. Experienced in IT management, automation, and system administration, with a strong passion for efficiency and repeatability. Skilled in Active Directory, Microsoft 365, and hybrid Exchange environments, while also building self-hosted infrastructure with Docker, Python, and PowerShell. Known for solving complex problems under pressure, from keeping legacy ERP systems alive to automating new solutions.
+IT support professional with 4+ years of hands-on experience resolving end-user issues, managing Active Directory, and administering Microsoft 365 in hybrid environments. Known for staying calm under pressure and finding efficient, lasting solutions rather than quick fixes. Comfortable supporting users at all technical levels, with a habit of improving processes and automating repetitive tasks wherever possible.
 
-Skills
+## Core Skills
 
-- Infrastructure & Systems: Windows Server, Active Directory, O365 (Hybrid Exchange), Ubuntu Server, OPNsense, SmartPSS, ERP (Forth Shift), Waters Empower software
-- Automation & Scripting: Python, PowerShell, SQL (queries/reports), cron jobs, GitHub version control
-- DevOps & Tools: Docker, Docker Compose, Pi-hole, PiKVM, ZFS/RAID, monitoring & alerting scripts
-- Networking & Security: VLANs, TCP/IP, DHCP, DNS | CompTIA Security+, Network+, A+
-- Procurement & Vendor Management: IT hardware/software purchasing, vendor coordination (Sharp, Waters, MSPs)
-- Other: 3D printing & CNC, welding, automotive repair, forklift/scissor lift certified
+Active Directory · Microsoft 365 · Azure AD · Freshdesk / Ticketing Systems · TeamViewer & RDP · Windows Imaging & Deployment · Hardware Repair & Maintenance · Network Administration & VLANs · VBA & Excel Automation · Backup & Disaster Recovery · Docker/Containerization · Linux Administration
 
-Professional Experience
+## Work Experience
 
-IT Manager | Sovereign Pharmaceuticals  
-Sept 2023 – Jul 2025, Fort Worth, TX
+**Home Lab & Personal Projects** | Jul 2025 – Present
 
-- Led IT operations for 200+ users across 5 buildings, managing identity, infrastructure, and support while reporting to MSP.
-- Administered Active Directory, O365 hybrid Exchange, and Microsoft licensing.
-- Automated tasks with PowerShell & Python, including password generation and monitoring scripts with cron jobs + Discord alerts.
-- Deployed laptops, desktops, and printers; managed ERP (Forth Shift) and Empower chromatography software.
-- Oversaw vendor coordination (Sharp, Waters) and site-level procurement (~20 laptops annually, $1K/month consumables).
-- Implemented security cameras, cabling, and MDF/IDF layouts during site renovations.
+- Built and maintain a Linux home server with mirrored ZFS storage, automated backups, and Docker Compose-based self-hosted services exposed securely via Cloudflare Tunnel.
+- Configured a custom OPNsense router with VLAN segmentation, per-VLAN firewall rules, and Pi-hole DNS filtering.
+- Built an automated Python scraper that collects and publishes live event data to a public calendar and Discord, running unattended with health monitoring.
 
-IT Support Specialist | Sovereign Pharmaceuticals  
-Feb 2022 – Sept 2023, Fort Worth, TX
+**IT Support Specialist II** | Sovereign Pharmaceuticals | Sep 2023 – Jul 2025, Fort Worth, TX
 
-- Provided Tier 1–2 support for 200+ users and 230+ systems, resolving 200+ tickets monthly while maintaining SLAs.
-- Administered Microsoft 365, Azure AD, and Exchange identity provisioning.
-- Reduced PC deployment time by 40% through automation and documentation.
-- Supported Microsoft 365 tenant migration and site integrations.
-- Configured VPNs and supported new site acquisitions.
+- Administered Active Directory and Microsoft 365, managing user accounts, groups, permissions, and email distribution lists.
+- Diagnosed and resolved Tier 1–2 issues including VPN, printing, and Outlook via Freshdesk, often self-researching unfamiliar software to find solutions.
+- Performed hardware repairs and maintenance including screen swaps, memory upgrades, and drive cloning to extend equipment life on a limited budget.
+- Built and deployed Windows images via bootable USB, standardizing workstation setup across the environment.
+- Onboarded and mentored a junior IT hire across all daily support workflows.
 
-Account Support Specialist | PRA Group  
-Aug 2021 – Feb 2022, North Richland Hills, TX
+**IT Support Specialist** | Sovereign Pharmaceuticals | Feb 2022 – Sep 2023, Fort Worth, TX
 
-- Assisted customers with account access issues via live chat (3 concurrent sessions) and email.
-- Guided users through secure account updates and payment plan setup.
-- Balanced high-volume workload of live support and email queues while maintaining accuracy.
-- Delivered Tier 1 troubleshooting and escalations in compliance-driven environment.
+- Resolved Tier 1 help desk tickets covering common hardware, software, and account issues using Freshdesk.
+- Assisted with PC deployments, user onboarding, and basic Microsoft 365 and Active Directory tasks.
+- Collaborated with senior staff on escalations, building technical knowledge.
 
-Department Manager | Walmart  
-2018 – 2021, Multiple Locations
+**Account Support Specialist** | PRA Group | Aug 2021 – Feb 2022, North Richland Hills, TX
 
-- Promoted from stocker to consumables manager during COVID, leading a 10-person team and serving as overnight manager for 30+ associates.
-- Directed store-wide operations 2 nights per week as highest-ranking manager.
-- Managed high-demand consumables (toilet paper, sanitizer, wipes) during pandemic shortages.
-- Sent to underperforming stores to stabilize operations and improve compliance.
-- Trained staff, oversaw merchandising, price changes, and holiday/seasonal displays.
+- Provided account support and issue resolution for incoming client inquiries, maintaining accuracy, professionalism, and consistent service quality across high-volume interactions.
 
-Team Member / Keyholder | 7-Eleven  
-2017 – 2018
+**Various Roles – Team Lead, Trainer, Sales** | Walmart & 7-Eleven | Jun 2018 – Aug 2021, Multiple Locations
 
-- Promoted from stocker to keyholder within weeks, entrusted with opening/closing store operations independently.
-- Handled cash accountability, including ATM deposits, bank drops, and vendor checks.
-- Ordered seasonal products, managed vendor deliveries, and prepared store for promotions.
-- Conducted loss-prevention activities including camera footage review.
+- Progressed through team lead and trainer roles across retail environments, handling customer service, cash management, inventory, and staff training.
 
-Projects
+## Projects
 
-- FAB Events Calendar – Python app in Docker that scrapes event websites and syncs to Google Calendar/iCal; integrated Hugo hub site, daily cron health checks, Discord notifications.
-- Password Automation Tool – PowerShell script used in production onboarding to generate secure, memorable 14-character temporary passwords, reducing reset requests.
-- Home Lab – Ubuntu server w/ ZFS mirror + RAID-Z1; Pi-hole + Unbound DNS redundancy; PiKVM out-of-band access; OPNsense firewall/router w/ VLANs; backup strategy with offsite replication.
+**Home Lab & Personal Projects** | Aug 2025
 
-Certifications
+- Built and maintain a home server with mirrored ZFS storage, automated backups, and Docker Compose-based self-hosted services exposed securely via Cloudflare Tunnel.
+- Configured a custom OPNsense router with VLAN segmentation, per-VLAN firewall rules, and Pi-hole DNS filtering.
+- Built an automated Python scraper that collects and publishes live event data to a public calendar and Discord, running unattended with health monitoring.
 
-- CompTIA Security+
-- CompTIA Network+
-- CompTIA A+
+**TCG Resale Business & Automation** | Oct 2025
 
+- Operate an independent trading card resale business, managing inventory, pricing, and order fulfillment.
+- Built a suite of custom VBA tools in Excel to automate inventory management and dynamic repricing, including market-based price calculations, excess stock tracking, and staple floor overrides.
+
+## Certifications
+
+- **CompTIA Security+** — [Credly](https://www.credly.com/badges/e2998bfa-0daa-49a3-8139-d894c0bb11a0)
+- **CompTIA Network+** — [Credly](https://www.credly.com/badges/9a9efe12-d442-47c5-ad46-e8831bbce715)
+- **CompTIA A+** — [Credly](https://www.credly.com/badges/bca47ce0-3102-4b96-9256-230ac86bb3bb/linked_in_profile)
+
+## Education
+
+Diploma | Glen Rose High School | 2018

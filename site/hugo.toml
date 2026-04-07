@@ -53,8 +53,8 @@ publishDir = "public"
     enable = true
     intro = "Hi, I'm"
     title = "Chase Osborne."
-    subtitle = "Systems Administrator"
-    content = "Systems Administrator with 4+ years supporting hybrid Windows and Linux environments for 200+ users. Skilled in AD, Microsoft 365, Azure AD, scripting, deployments, and troubleshooting across on-prem and cloud infrastructure."
+    subtitle = "IT Support Professional"
+    content = "IT support professional with 4+ years of hands-on experience resolving end-user issues, managing Active Directory, and administering Microsoft 365 in hybrid environments. Known for finding efficient, lasting solutions and automating repetitive tasks wherever possible."
     image = "/images/headshot.jpg"
     [params.hero.bottomImage]
       enable = true
@@ -79,20 +79,24 @@ publishDir = "public"
     title = "About / Resume"
     image = "/images/headshot.jpg"
     content = """
-Systems Administrator with 4+ years supporting hybrid Windows and Linux environments for 200+ users. Skilled in Active Directory, Microsoft 365, Azure AD, scripting, deployments, and troubleshooting. Interested in automation, monitoring, and growing DevOps/AWS experience.
+IT support professional with 4+ years of hands-on experience resolving end-user issues, managing Active Directory, and administering Microsoft 365 in hybrid environments. Known for staying calm under pressure and finding efficient, lasting solutions rather than quick fixes. Comfortable supporting users at all technical levels, with a habit of improving processes and automating repetitive tasks wherever possible.
 """
     [params.about.skills]
       enable = true
-      title = "Recent technologies and tools:"
+      title = "Core skills:"
       items = [
-        "Windows Server",
         "Active Directory",
-        "O365 (Hybrid Exchange)",
-        "Ubuntu Server",
-        "OPNsense",
-        "Docker & Compose",
-        "ZFS/RAID",
-        "Python & PowerShell"
+        "Microsoft 365",
+        "Azure AD",
+        "Freshdesk / Ticketing",
+        "Windows Imaging & Deployment",
+        "Hardware Repair & Maintenance",
+        "Network Administration & VLANs",
+        "Docker/Containerization",
+        "Linux Administration",
+        "Backup & Disaster Recovery",
+        "VBA & Excel Automation",
+        "TeamViewer & RDP"
       ]
 
   [params.projects]
@@ -131,6 +135,17 @@ Systems Administrator with 4+ years supporting hybrid Windows and Linux environm
         icon = "fas fa-link"
         url = "/projects/it-specialist-toolbox/"
 
+    [[params.projects.items]]
+      title = "TCG Resale & Automation"
+      content = """
+      Independent trading card resale business with custom VBA tooling in Excel: market-based dynamic repricing, excess stock tracking, staple floor overrides, and inventory management — all automated and running without manual calculation.
+      """
+      image = "/images/projects/password-tool.svg"
+      url = "/projects/tcg-resale/"
+      [[params.projects.items.links]]
+        icon = "fas fa-link"
+        url = "/projects/tcg-resale/"
+
 [params.achievements]
   enable = true
   title = "Certifications"
@@ -161,44 +176,51 @@ Systems Administrator with 4+ years supporting hybrid Windows and Linux environm
   enable = true
 
   [[params.experience.items]]
-    job = "Lead Systems Administrator"
-    company = "Sovereign Pharmaceuticals"
-    date = "Sep 2023 - Jul 2025, Fort Worth, TX"
+    job = "Home Lab & Personal Projects"
+    company = "Self-directed"
+    date = "Jul 2025 – Present"
     content = """
-- Supported 200+ users across five buildings, maintaining desktops, servers, Microsoft 365, Azure AD, and on-prem AD.
-- Assisted with tenant migration and SAP ERP rollout, handling user transitions, access provisioning, Group Policy updates, and troubleshooting.
-- Improved workstation imaging and deployment consistency.
-- Streamlined user onboarding and access setup.
-- Strengthened documentation and troubleshooting guides.
+- Built and maintain a Linux home server with mirrored ZFS storage, automated backups, and Docker Compose-based self-hosted services exposed securely via Cloudflare Tunnel.
+- Configured a custom OPNsense router with VLAN segmentation, per-VLAN firewall rules, and Pi-hole DNS filtering.
+- Built an automated Python scraper that collects and publishes live event data to a public calendar and Discord, running unattended with health monitoring.
+"""
+
+  [[params.experience.items]]
+    job = "IT Support Specialist II"
+    company = "Sovereign Pharmaceuticals"
+    date = "Sep 2023 – Jul 2025, Fort Worth, TX"
+    content = """
+- Administered Active Directory and Microsoft 365, managing user accounts, groups, permissions, and email distribution lists.
+- Diagnosed and resolved Tier 1–2 issues including VPN, printing, and Outlook via Freshdesk, often self-researching unfamiliar software to find solutions.
+- Performed hardware repairs and maintenance including screen swaps, memory upgrades, and drive cloning to extend equipment life on a limited budget.
+- Built and deployed Windows images via bootable USB, standardizing workstation setup across the environment.
+- Onboarded and mentored a junior IT hire across all daily support workflows.
 """
 
   [[params.experience.items]]
     job = "IT Support Specialist"
     company = "Sovereign Pharmaceuticals"
-    date = "Feb 2022 - Sep 2023, Fort Worth, TX"
+    date = "Feb 2022 – Sep 2023, Fort Worth, TX"
     content = """
-- Provided Tier 1-2 support in a hybrid environment, resolving daily user issues, improving documentation, and streamlining PC deployments.
-- Managed identity tasks and Microsoft 365 administration; assisted with onboarding, hardware setup, and site integrations.
-- Collaborated with senior staff on escalations to ensure quick resolution.
-- Supported software rollouts and basic application configuration.
+- Resolved Tier 1 help desk tickets covering common hardware, software, and account issues using Freshdesk.
+- Assisted with PC deployments, user onboarding, and basic Microsoft 365 and Active Directory tasks.
+- Collaborated with senior staff on escalations, building technical knowledge.
 """
 
   [[params.experience.items]]
     job = "Account Support Specialist"
     company = "PRA Group"
-    date = "Aug 2021 - Feb 2022, North Richland Hills, TX"
+    date = "Aug 2021 – Feb 2022, North Richland Hills, TX"
     content = """
-- Provided account support, customer service, and issue resolution for incoming client inquiries.
-- Handled account updates, data verification, and documentation while maintaining accuracy and professionalism.
+- Provided account support and issue resolution for incoming client inquiries, maintaining accuracy, professionalism, and consistent service quality across high-volume interactions.
 """
 
   [[params.experience.items]]
-    job = "Various Roles - Team Lead, Trainer, Sales"
+    job = "Various Roles – Team Lead, Trainer, Sales"
     company = "Walmart & 7-Eleven"
-    date = "Jun 2018 - Aug 2021, Multiple Locations"
+    date = "Jun 2018 – Aug 2021, Multiple Locations"
     content = """
-- Handled customer service, cash management, inventory tasks, and daily operations across high-volume retail and service roles.
-- Maintained accuracy, communication, and reliability while leading shifts and supporting staff training.
+- Progressed through team lead and trainer roles across retail environments, handling customer service, cash management, inventory, and staff training.
 """
 
 [menu]
