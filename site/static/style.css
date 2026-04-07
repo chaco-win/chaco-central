@@ -56,6 +56,20 @@ aside.social { display: none !important; }
 /* Hide horizontal rules inside post content */
 article.page-content hr,.page-content hr{display:none !important;}
 
+/* About skills: 3-column grid */
+section#about .col-lg-6 ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+@media (max-width: 600px) {
+  section#about .col-lg-6 ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Make Projects cards clickable: stretch the actual project link over the tile */
 section#projects .card { position: relative; }
 section#projects .card a[href^="/projects/"] {
