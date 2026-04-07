@@ -57,7 +57,7 @@ aside.social { display: none !important; }
 article.page-content hr,.page-content hr{display:none !important;}
 
 /* About skills: 3-column grid */
-section#about .col-lg-6 ul {
+section#about .content ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.25rem 1rem;
@@ -65,7 +65,7 @@ section#about .col-lg-6 ul {
   padding-left: 0;
 }
 @media (max-width: 600px) {
-  section#about .col-lg-6 ul {
+  section#about .content ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
