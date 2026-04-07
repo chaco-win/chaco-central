@@ -1,4 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
   <rect width="400" height="200" fill="#111827"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#e5e7eb" font-family="Segoe UI, Roboto, Arial" font-size="18">Homelab</text>
+  <!-- Server rack -->
+  <rect x="155" y="40" width="90" height="120" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <!-- Rack units -->
+  <rect x="162" y="50" width="76" height="16" rx="2" fill="#0f172a" stroke="#60a5fa" stroke-width="1"/>
+  <rect x="162" y="72" width="76" height="16" rx="2" fill="#0f172a" stroke="#60a5fa" stroke-width="1"/>
+  <rect x="162" y="94" width="76" height="16" rx="2" fill="#0f172a" stroke="#60a5fa" stroke-width="1"/>
+  <rect x="162" y="116" width="76" height="16" rx="2" fill="#0f172a" stroke="#60a5fa" stroke-width="1"/>
+  <!-- Status LEDs -->
+  <circle cx="172" cy="58" r="3" fill="#22c55e"/>
+  <circle cx="172" cy="80" r="3" fill="#22c55e"/>
+  <circle cx="172" cy="102" r="3" fill="#facc15"/>
+  <circle cx="172" cy="124" r="3" fill="#22c55e"/>
+  <!-- Drive slots -->
+  <rect x="182" y="54" width="48" height="8" rx="1" fill="#1e3a5f"/>
+  <rect x="182" y="76" width="48" height="8" rx="1" fill="#1e3a5f"/>
+  <rect x="182" y="98" width="48" height="8" rx="1" fill="#1e3a5f"/>
+  <rect x="182" y="120" width="48" height="8" rx="1" fill="#1e3a5f"/>
+  <!-- Network lines suggesting connectivity -->
+  <line x1="245" y1="58" x2="270" y2="45" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+  <line x1="245" y1="80" x2="270" y2="80" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+  <line x1="245" y1="102" x2="270" y2="115" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+  <circle cx="273" cy="45" r="4" fill="#2563eb" opacity="0.8"/>
+  <circle cx="273" cy="80" r="4" fill="#2563eb" opacity="0.8"/>
+  <circle cx="273" cy="115" r="4" fill="#2563eb" opacity="0.8"/>
 </svg>
